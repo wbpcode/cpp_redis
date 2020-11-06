@@ -2230,6 +2230,8 @@ namespace cpp_redis {
  *
  */
 			void connection_disconnection_handler(network::redis_connection &connection);
+ 
+	public:
 
 /**
  * reset the queue of pending callbacks
@@ -2237,6 +2239,7 @@ namespace cpp_redis {
  */
 			void clear_callbacks();
 
+	private:
 /**
  * try to commit the pending pipelined
  * if client is disconnected, will throw an exception and clear all pending callbacks (call clear_callbacks())
